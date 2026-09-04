@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hòa Đình Football</title>
+<meta name="description" content="Cộng đồng bóng đá Hòa Đình - giải đấu, kết quả, đội bóng và những khoảnh khắc đáng nhớ.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#087443;--green2:#0ca35f;--dark:#071711;--cream:#f6f8f5;--gold:#f3bd35;--text:#17221d}
+body{font-family:"Be Vietnam Pro",Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(7,23,17,.94);backdrop-filter:blur(12px);color:white;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:21px;letter-spacing:-.5px}
+.ball{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#fff1a8);color:#102018;font-size:20px;box-shadow:0 5px 20px #0005}
+nav{display:flex;gap:25px;font-size:14px;font-weight:600;color:#dce8e1}
+nav a:hover{color:var(--gold)}
+.hero{min-height:650px;color:#fff;position:relative;display:flex;align-items:end;overflow:hidden;background:#071711}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08) 25%,rgba(0,0,0,.82) 100%),url("hoa-dinh-1.jpg") center/cover}
+.hero-content{position:relative;padding:90px 0 65px;max-width:760px}
+.badge{display:inline-flex;padding:7px 13px;border:1px solid #ffffff42;border-radius:99px;background:#071711aa;font-size:12px;font-weight:800;color:#ffe08a;text-transform:uppercase;letter-spacing:1px;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,78px);line-height:.98;letter-spacing:-3px;margin-bottom:20px}
+.hero p{font-size:18px;color:#e9f1ed;max-width:650px}
+.hero-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 19px;border-radius:10px;font-weight:800;font-size:14px}
+.btn-primary{background:var(--gold);color:#152018}.btn-secondary{background:#ffffff16;border:1px solid #ffffff30}
+.section{padding:78px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}
+.kicker{color:var(--green);font-weight:900;text-transform:uppercase;font-size:12px;letter-spacing:1.4px}
+h2{font-size:34px;line-height:1.1;letter-spacing:-1px;margin-top:6px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 8px 30px #1020180c;border:1px solid #dfe8e2}
+.card img{width:100%;height:225px;object-fit:cover;display:block}
+.card-body{padding:20px}.tag{font-size:11px;color:var(--green);font-weight:900;text-transform:uppercase}.card h3{font-size:19px;line-height:1.3;margin:7px 0}
+.card p{font-size:13px;color:#68756e}
+.feature{background:var(--dark);color:#fff;border-radius:25px;overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr}
+.feature img{width:100%;height:100%;min-height:430px;object-fit:cover}
+.feature-copy{padding:50px;display:flex;flex-direction:column;justify-content:center}
+.feature-copy h2{font-size:42px}.feature-copy p{color:#c8d4cd;margin:18px 0 25px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}
+.stat{background:#ffffff0b;border:1px solid #ffffff14;border-radius:14px;padding:16px}.stat strong{font-size:26px;display:block;color:var(--gold)}.stat span{font-size:11px;color:#bdc9c2}
+.table-wrap{background:#fff;border:1px solid #dfe8e2;border-radius:18px;overflow:auto}
+table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:15px 18px;border-bottom:1px solid #edf1ee;font-size:13px}th{background:#f2f6f3;color:#53625a;font-size:11px;text-transform:uppercase}tr:last-child td{border-bottom:0}.rank{font-weight:900;color:var(--green)}
+.gallery{columns:3 280px;column-gap:16px}.gallery img{width:100%;margin:0 0 16px;border-radius:16px;display:block;break-inside:avoid}
+.cta{background:linear-gradient(120deg,#075b35,#0c8d51);border-radius:24px;padding:55px;color:white;display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:38px}.cta p{color:#d8eee2;margin-top:8px}
+footer{background:#071711;color:#aabbb1;padding:35px 0;font-size:13px}.footer-in{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-logo{color:white;font-weight:900}
+
+.s1{background:linear-gradient(180deg,#f6f8f5 0,#eef5f0 100%)}
+.s1-hero{position:relative;border-radius:24px;overflow:hidden;background:#071711;min-height:500px;box-shadow:0 18px 50px #10201818}
+.s1-hero img{width:100%;height:500px;object-fit:cover;display:block}
+.s1-overlay{position:absolute;inset:auto 0 0;padding:90px 55px 42px;color:#fff;background:linear-gradient(180deg,transparent,rgba(0,0,0,.9))}
+.s1-overlay span,.quote-card span{font-size:11px;font-weight:900;letter-spacing:1.4px;color:#f3bd35}
+.s1-overlay h2{font-size:clamp(30px,5vw,50px);margin-top:8px;max-width:760px}
+.s1-overlay p{max-width:700px;color:#e2ebe6;margin-top:10px}
+.s1-quotes{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.quote-card{background:#fff;border:1px solid #dfe8e2;border-radius:18px;overflow:hidden;display:grid;grid-template-columns:150px 1fr;box-shadow:0 8px 30px #1020180c}
+.quote-card img{width:150px;height:100%;min-height:180px;object-fit:cover}
+.quote-card div{padding:24px;display:flex;flex-direction:column;justify-content:center}
+.quote-card h3{font-size:18px;line-height:1.5;margin-top:9px}
+.s1-mantra{margin-top:24px;text-align:center;font-size:clamp(21px,3vw,32px);font-weight:900;color:#075b35;padding:28px;border:2px dashed #b8d2c3;border-radius:18px;background:#fff}
+@media(max-width:800px){.s1-hero img{height:420px}.s1-overlay{padding:70px 25px 28px}.s1-quotes{grid-template-columns:1fr}.quote-card{grid-template-columns:120px 1fr}.quote-card img{width:120px;min-height:160px}}
+@media(max-width:800px){nav{display:none}.hero{min-height:570px}.grid{grid-template-columns:1fr}.feature{grid-template-columns:1fr}.feature img{min-height:280px}.feature-copy{padding:32px}.stats{grid-template-columns:repeat(2,1fr)}.cta{padding:35px;display:block}.cta .btn{display:inline-block;margin-top:20px}h1{letter-spacing:-2px}}
+
+.standings-tools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}.tool-btn{border:1px solid #d5e1da;background:#fff;color:#173027;border-radius:10px;padding:10px 14px;font:700 13px inherit;cursor:pointer}.tool-btn:hover{border-color:#087443;transform:translateY(-1px)}.tool-btn.primary{background:#087443;color:#fff;border-color:#087443}.tool-btn.danger{color:#a53b2d}.swap-panel{display:flex;align-items:end;gap:12px;background:#eef6f1;border:1px solid #cfe2d6;padding:14px;border-radius:14px;margin-bottom:18px;flex-wrap:wrap}.swap-panel div{display:flex;flex-direction:column;gap:5px}.swap-panel label{font-size:11px;font-weight:800;text-transform:uppercase;color:#5b6d63}.swap-panel select{min-width:180px;padding:9px;border:1px solid #c9d8d0;border-radius:8px;background:#fff}.standings-table{min-width:820px}.standings-table th,.standings-table td{padding:11px 9px;text-align:center;white-space:nowrap}.standings-table th:nth-child(2),.standings-table td:nth-child(2){text-align:left}.standings-table tbody tr:first-child{background:#fffbea}.standings-table .rank{width:35px}.team-input,.stat-input{border:1px solid #c8d8cf;border-radius:6px;padding:5px 6px;font:600 12px inherit;background:#fff}.team-input{width:125px}.stat-input{width:45px;text-align:center}.form-badge{font-size:10px;font-weight:900;padding:3px 5px;border-radius:5px;background:#e8f1eb;color:#087443}.standings-note{margin-top:12px;color:#68756e;font-size:12px}.standings-grid{align-items:start}
+@media(max-width:900px){.standings-grid{grid-template-columns:1fr!important}.standings-table{min-width:780px}.swap-panel{align-items:stretch}.swap-panel select{min-width:150px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#"><span class="ball">⚽</span> HÒA ĐÌNH FOOTBALL</a>
+    <nav>
+      <a href="#home">Trang chủ</a><a href="#giai-dau">Giải đấu</a><a href="#open-s2">Open Cup S2</a><a href="#ket-qua">Kết quả</a><a href="#doi-bong">Đội bóng</a><a href="#thu-vien">Thư viện</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-content">
+    <span class="badge">Bóng đá cộng đồng • Hòa Đình</span>
+    <h1>Đam mê trên sân.<br>Gắn kết dưới màu cờ.</h1>
+    <p>Nơi cập nhật những trận cầu, giải đấu và khoảnh khắc đáng nhớ của bóng đá khu Hòa Đình.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#giai-dau">Xem giải đấu</a><a class="btn btn-secondary" href="#thu-vien">Xem hình ảnh</a></div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="section-head"><div><div class="kicker">Tin nổi bật</div><h2>Những câu chuyện trên sân</h2></div></div>
+  <div class="grid">
+    <article class="card"><img src="hoa-dinh-1.jpg"><div class="card-body"><div class="tag">Vô địch 2026</div><h3>Hòa Đình lên ngôi tại Xuân Ổ A Open 2026</h3><p>Một hành trình đầy cảm xúc và những khoảnh khắc bùng nổ sau tiếng còi mãn cuộc.</p></div></article>
+    <article class="card"><img src="hoa-dinh-2.jpg"><div class="card-body"><div class="tag">Ngày hội bóng đá</div><h3>Các xóm cùng chuẩn bị cho mùa giải mới</h3><p>Bóng đá không chỉ là cuộc chơi — đó còn là dịp để bà con, anh em và các xóm gắn kết.</p></div></article>
+    <article class="card"><img src="hoa-dinh-3.jpg"><div class="card-body"><div class="tag">Giải làng 2025</div><h3>Nhà vô địch và khoảnh khắc không thể quên</h3><p>Những nụ cười, huy chương và chiếc cúp ghi dấu một mùa giải đáng nhớ.</p></div></article>
+  </div>
+</div>
+</section>
+
+<section class="section" id="giai-dau" style="padding-top:15px">
+<div class="container">
+  <div class="feature">
+    <img src="hoa-dinh-2.jpg">
+    <div class="feature-copy">
+      <div class="kicker" style="color:#f3bd35">GIẢI NỘI KHU • LẦN 5 • 2026</div>
+      <h2>Giải bóng đá phong trào khu Hòa Đình lần 5 - năm 2026</h2>
+      <p>Sân chơi dành cho thanh niên trong khu Hòa Đình — nơi gặp gỡ, giao lưu, rèn luyện sức khỏe và cùng nhau tạo nên những kỷ niệm đẹp trên sân cỏ. Không chỉ là thi đấu, đây còn là dịp để các xóm thêm gắn kết và xây dựng một sân chơi thể thao lành mạnh, vui vẻ.</p>
+      <div class="stats">
+        <div class="stat"><strong>⚽</strong><span>Trận đấu</span></div>
+        <div class="stat"><strong>🏆</strong><span>Đội bóng</span></div>
+        <div class="stat"><strong>🤝</strong><span>Gắn kết</span></div>
+        <div class="stat"><strong>🔥</strong><span>Máu lửa</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section s1" id="open-s2">
+<div class="container">
+  <div class="section-head"><div><div class="kicker">HÒA ĐÌNH OPEN CUP • S1</div><h2>Sân chơi bóng đá của các đội bóng trong tỉnh</h2></div></div>
+  <div class="s1-hero">
+    <img src="open-s2-banner.jpg" alt="Hòa Đình Open Cup S2">
+    <div class="s1-overlay"><span>⚽ HÒA ĐÌNH OPEN CUP</span><h2>Đam mê hội tụ – bóng đá kết nối mọi người</h2><p>Được những người con Hòa Đình tổ chức với mong muốn tạo nên một sân chơi bóng đá lành mạnh, vui vẻ và giàu tinh thần giao lưu cho các đội bóng trong tỉnh. Đây là nơi các đội gặp gỡ, thi đấu hết mình và cùng lan tỏa tình yêu bóng đá.</p></div>
+  </div>
+  <div class="s1-quotes">
+    <article class="quote-card"><img src="open-s2-team.jpg" alt="Các đội bóng Hòa Đình Open Cup S2"><div><span>🤝 TINH THẦN ĐOÀN KẾT</span><h3>“Trên sân là đối thủ, bước ra khỏi sân vẫn là những người anh em cùng chung một tình yêu với trái bóng.”</h3></div></article>
+    <article class="quote-card"><img src="open-s2-match.jpg" alt="Khoảnh khắc thi đấu Hòa Đình Open Cup S2"><div><span>🔥 KHÁT KHAO CHIẾN THẮNG</span><h3>“90 phút trên sân là 90 phút của bản lĩnh, nhiệt huyết và khát khao chiến thắng.”</h3></div></article>
+  </div>
+  <div class="s1-mantra">“Từ tình yêu bóng đá, Hòa Đình tạo nên một sân chơi để những người yêu bóng đá trong tỉnh cùng gặp gỡ, thi đấu và sẻ chia niềm vui.”</div>
+</div>
+</section>
+
+<section class="section" id="ket-qua">
+<div class="container">
+  <div class="section-head"><div><div class="kicker">HÒA ĐÌNH OPEN CUP • S2</div><h2>Bảng đấu & xếp hạng</h2></div></div>
+  <p style="color:#68756e;margin:-15px 0 20px">Bảng đấu dự kiến sau bốc thăm. Có thể chỉnh tên đội, đổi đội giữa hai bảng và cập nhật thành tích. Bảng sẽ tự tính điểm và hiệu số.</p>
+
+  <div class="standings-tools">
+    <button class="tool-btn" id="editBtn">✏️ Chỉnh sửa</button>
+    <button class="tool-btn" id="swapBtn">🔄 Đổi đội giữa bảng</button>
+    <button class="tool-btn" id="sortBtn">📊 Tự xếp hạng</button>
+    <button class="tool-btn primary" id="saveBtn">💾 Lưu bảng</button>
+    <button class="tool-btn danger" id="resetBtn">↩ Đặt lại</button>
+  </div>
+  <div id="swapPanel" class="swap-panel" style="display:none">
+    <div><label>Bảng A</label><select id="swapA"></select></div>
+    <span>↔</span>
+    <div><label>Bảng B</label><select id="swapB"></select></div>
+    <button class="tool-btn primary" id="doSwap">Đổi bảng</button>
+  </div>
+
+  <div class="grid standings-grid" style="grid-template-columns:1fr 1fr">
+    <div class="table-wrap"><table class="standings-table"><thead><tr><th colspan="11">BẢNG A • 3 ĐỘI</th></tr><tr><th>#</th><th>Đội bóng</th><th>Tr</th><th>Th</th><th>H</th><th>T</th><th>BT</th><th>BB</th><th>HS</th><th>Đ</th><th>Form</th></tr></thead><tbody id="tableA"></tbody></table></div>
+    <div class="table-wrap"><table class="standings-table"><thead><tr><th colspan="11">BẢNG B • 4 ĐỘI</th></tr><tr><th>#</th><th>Đội bóng</th><th>Tr</th><th>Th</th><th>H</th><th>T</th><th>BT</th><th>BB</th><th>HS</th><th>Đ</th><th>Form</th></tr></thead><tbody id="tableB"></tbody></table></div>
+  </div>
+  <div class="standings-note"><b>Tr</b> trận · <b>Th</b> thắng · <b>H</b> hòa · <b>T</b> thua · <b>BT</b> bàn thắng · <b>BB</b> bàn thua · <b>HS</b> hiệu số · <b>Đ</b> điểm. Thắng 3 điểm, hòa 1 điểm.</div>
+</div>
+</section>
+
+<section class="section" id="thu-vien">
+<div class="container">
+  <div class="section-head"><div><div class="kicker">Khoảnh khắc</div><h2>Thư viện Hòa Đình</h2></div></div>
+  <div class="gallery"><img src="hoa-dinh-1.jpg"><img src="hoa-dinh-3.jpg"><img src="hoa-dinh-2.jpg"></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+  <div class="cta">
+    <div><div class="kicker" style="color:#ffe08a">Hòa Đình Football</div><h2>Cùng viết tiếp câu chuyện bóng đá.</h2><p>Hai giải đấu, kết quả, hình ảnh và những khoảnh khắc bóng đá đáng nhớ của Hòa Đình.</p></div>
+    <a class="btn btn-primary" href="#home">Về đầu trang ↑</a>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-in"><div class="footer-logo">⚽ HÒA ĐÌNH FOOTBALL</div><div>© 2026 • Bóng đá cộng đồng khu Hòa Đình</div></div></footer>
+
+<script>
+const defaultGroups={
+ A:[{name:'Xóm 1',w:0,d:0,l:0,gf:0,ga:0,form:[]},{name:'Xóm 2',w:0,d:0,l:0,gf:0,ga:0,form:[]},{name:'Xóm 3',w:0,d:0,l:0,gf:0,ga:0,form:[]}],
+ B:[{name:'Xóm 4',w:0,d:0,l:0,gf:0,ga:0,form:[]},{name:'Xóm 5',w:0,d:0,l:0,gf:0,ga:0,form:[]},{name:'Xóm 6',w:0,d:0,l:0,gf:0,ga:0,form:[]},{name:'Xóm 7',w:0,d:0,l:0,gf:0,ga:0,form:[]}]};
+const KEY='hoaDinhOpenCupS2GroupsV3';
+let groups=JSON.parse(localStorage.getItem(KEY)||'null')||structuredClone(defaultGroups); let editing=false;
+const pts=x=>x.w*3+x.d, tr=x=>x.w+x.d+x.l, hs=x=>x.gf-x.ga;
+function sorted(arr){return [...arr].sort((a,b)=>pts(b)-pts(a)||hs(b)-hs(a)||b.gf-a.gf||a.name.localeCompare(b.name,'vi'));}
+function formHtml(f){return f.length?f.slice(-5).map(x=>`<span class="form-badge">${x}</span>`).join(' '):'—'}
+function rowHtml(x,i){return `<tr>
+<td class="rank">${String(i+1).padStart(2,'0')}</td>
+<td>${editing?`<input class="team-input" data-field="name" value="${x.name.replace(/"/g,'&quot;')}">`:`<b>${x.name}</b>`}</td>
+<td>${editing?`<input class="stat-input" data-field="tr" value="${tr(x)}" disabled title="Tự tính">`:tr(x)}</td>
+<td>${editing?`<input class="stat-input" data-field="w" type="number" min="0" value="${x.w}">`:x.w}</td>
+<td>${editing?`<input class="stat-input" data-field="d" type="number" min="0" value="${x.d}">`:x.d}</td>
+<td>${editing?`<input class="stat-input" data-field="l" type="number" min="0" value="${x.l}">`:x.l}</td>
+<td>${editing?`<input class="stat-input" data-field="gf" type="number" min="0" value="${x.gf}">`:x.gf}</td>
+<td>${editing?`<input class="stat-input" data-field="ga" type="number" min="0" value="${x.ga}">`:x.ga}</td>
+<td>${hs(x)>0?'+':''}${hs(x)}</td><td><b>${pts(x)}</b></td><td>${formHtml(x.form)}</td></tr>`}
+function render(){['A','B'].forEach(g=>document.getElementById('table'+g).innerHTML=sorted(groups[g]).map((x,i)=>rowHtml(x,i)).join('')); fillSelects();}
+function syncInputs(){document.querySelectorAll('#tableA tr,#tableB tr').forEach((trEl)=>{const group=trEl.closest('tbody').id==='tableA'?'A':'B';const displayed=sorted(groups[group]);const idx=[...trEl.parentNode.children].indexOf(trEl);const x=displayed[idx];trEl.querySelectorAll('[data-field]').forEach(inp=>{let v=inp.value;if(inp.dataset.field==='name')x.name=v;else if(inp.dataset.field!=='tr')x[inp.dataset.field]=Math.max(0,parseInt(v||0));});});}
+function fillSelects(){const a=document.getElementById('swapA'),b=document.getElementById('swapB');a.innerHTML=groups.A.map((x,i)=>`<option value="${i}">${x.name}</option>`).join('');b.innerHTML=groups.B.map((x,i)=>`<option value="${i}">${x.name}</option>`).join('');}
+document.getElementById('editBtn').onclick=()=>{if(editing)syncInputs();editing=!editing;document.getElementById('editBtn').textContent=editing?'✅ Hoàn tất chỉnh sửa':'✏️ Chỉnh sửa';render();};
+document.getElementById('sortBtn').onclick=()=>{if(editing){syncInputs();}groups.A=sorted(groups.A);groups.B=sorted(groups.B);render();};
+document.getElementById('saveBtn').onclick=()=>{if(editing){syncInputs();editing=false;document.getElementById('editBtn').textContent='✏️ Chỉnh sửa';}localStorage.setItem(KEY,JSON.stringify(groups));render();alert('Đã lưu bảng đấu trên thiết bị này.');};
+document.getElementById('resetBtn').onclick=()=>{if(confirm('Đặt lại bảng đấu về danh sách mặc định?')){groups=structuredClone(defaultGroups);editing=false;localStorage.removeItem(KEY);document.getElementById('editBtn').textContent='✏️ Chỉnh sửa';render();}};
+document.getElementById('swapBtn').onclick=()=>{const p=document.getElementById('swapPanel');p.style.display=p.style.display==='none'?'flex':'none';fillSelects();};
+document.getElementById('doSwap').onclick=()=>{if(editing)syncInputs();const ai=+document.getElementById('swapA').value,bi=+document.getElementById('swapB').value;[groups.A[ai],groups.B[bi]]=[groups.B[bi],groups.A[ai]];localStorage.setItem(KEY,JSON.stringify(groups));render();alert('Đã đổi 2 đội giữa Bảng A và Bảng B.');};
+render();
+</script>
+</body>
+</html>
