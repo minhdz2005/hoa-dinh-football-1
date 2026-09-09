@@ -65,6 +65,15 @@ footer{background:#071711;color:#aabbb1;padding:35px 0;font-size:13px}.footer-in
 
 .standings-tools{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}.tool-btn{border:1px solid #d5e1da;background:#fff;color:#173027;border-radius:10px;padding:10px 14px;font:700 13px inherit;cursor:pointer}.tool-btn:hover{border-color:#087443;transform:translateY(-1px)}.tool-btn.primary{background:#087443;color:#fff;border-color:#087443}.tool-btn.danger{color:#a53b2d}.swap-panel{display:flex;align-items:end;gap:12px;background:#eef6f1;border:1px solid #cfe2d6;padding:14px;border-radius:14px;margin-bottom:18px;flex-wrap:wrap}.swap-panel div{display:flex;flex-direction:column;gap:5px}.swap-panel label{font-size:11px;font-weight:800;text-transform:uppercase;color:#5b6d63}.swap-panel select{min-width:180px;padding:9px;border:1px solid #c9d8d0;border-radius:8px;background:#fff}.standings-table{min-width:820px}.standings-table th,.standings-table td{padding:11px 9px;text-align:center;white-space:nowrap}.standings-table th:nth-child(2),.standings-table td:nth-child(2){text-align:left}.standings-table tbody tr:first-child{background:#fffbea}.standings-table .rank{width:35px}.team-input,.stat-input{border:1px solid #c8d8cf;border-radius:6px;padding:5px 6px;font:600 12px inherit;background:#fff}.team-input{width:125px}.stat-input{width:45px;text-align:center}.form-badge{font-size:10px;font-weight:900;padding:3px 5px;border-radius:5px;background:#e8f1eb;color:#087443}.standings-note{margin-top:12px;color:#68756e;font-size:12px}.standings-grid{align-items:start}
 @media(max-width:900px){.standings-grid{grid-template-columns:1fr!important}.standings-table{min-width:780px}.swap-panel{align-items:stretch}.swap-panel select{min-width:150px}}
+
+.video-section{background:linear-gradient(180deg,#f6f8f5 0%,#eef5f0 100%)}
+.video-wrap{max-width:980px;margin:0 auto;background:#071711;border-radius:22px;overflow:hidden;box-shadow:0 18px 50px #10201820;border:1px solid #d8e5dc}
+.video-wrap video{display:block;width:100%;height:auto;max-height:560px;background:#000}
+.video-caption{padding:20px 24px 24px;color:#dfece5}
+.video-caption h3{font-size:22px;color:#fff;margin-bottom:7px}
+.video-caption p{color:#b8c9c0;font-size:14px}
+@media(max-width:700px){.video-wrap{border-radius:15px}.video-caption{padding:16px}.video-caption h3{font-size:19px}}
+
 </style>
 </head>
 <body>
@@ -72,7 +81,7 @@ footer{background:#071711;color:#aabbb1;padding:35px 0;font-size:13px}.footer-in
   <div class="container nav">
     <a class="logo" href="#"><span class="ball">⚽</span> HÒA ĐÌNH FOOTBALL</a>
     <nav>
-      <a href="#home">Trang chủ</a><a href="#giai-dau">Giải đấu</a><a href="#open-s2">Open Cup S2</a><a href="#ket-qua">Kết quả</a><a href="#doi-bong">Đội bóng</a><a href="#thu-vien">Thư viện</a>
+      <a href="#home">Trang chủ</a><a href="#giai-dau">Giải đấu</a><a href="#open-s2">Open Cup S2</a><a href="#ket-qua">Kết quả</a><a href="#doi-bong">Đội bóng</a><a href="#video">Video</a><a href="#thu-vien">Thư viện</a>
     </nav>
   </div>
 </header>
@@ -94,6 +103,24 @@ footer{background:#071711;color:#aabbb1;padding:35px 0;font-size:13px}.footer-in
     <article class="card"><img src="hoa-dinh-1.jpg"><div class="card-body"><div class="tag">Vô địch 2026</div><h3>Hòa Đình lên ngôi tại Xuân Ổ A Open 2026</h3><p>Một hành trình đầy cảm xúc và những khoảnh khắc bùng nổ sau tiếng còi mãn cuộc.</p></div></article>
     <article class="card"><img src="hoa-dinh-2.jpg"><div class="card-body"><div class="tag">Ngày hội bóng đá</div><h3>Các xóm cùng chuẩn bị cho mùa giải mới</h3><p>Bóng đá không chỉ là cuộc chơi — đó còn là dịp để bà con, anh em và các xóm gắn kết.</p></div></article>
     <article class="card"><img src="hoa-dinh-3.jpg"><div class="card-body"><div class="tag">Giải làng 2025</div><h3>Nhà vô địch và khoảnh khắc không thể quên</h3><p>Những nụ cười, huy chương và chiếc cúp ghi dấu một mùa giải đáng nhớ.</p></div></article>
+  </div>
+</div>
+</section>
+
+<section class="section video-section" id="video">
+<div class="container">
+  <div class="section-head">
+    <div><div class="kicker">VIDEO • HÒA ĐÌNH FOOTBALL</div><h2>Khoảnh khắc trên sân cỏ</h2></div>
+  </div>
+  <div class="video-wrap">
+    <video controls playsinline preload="metadata">
+      <source src="hoa-dinh-video.mp4" type="video/mp4">
+      Trình duyệt của bạn không hỗ trợ phát video.
+    </video>
+    <div class="video-caption">
+      <h3>Những khoảnh khắc bóng đá của tổ dân phố Hòa Đình</h3>
+      <p>Cùng xem lại những hình ảnh và không khí bóng đá đáng nhớ.</p>
+    </div>
   </div>
 </div>
 </section>
